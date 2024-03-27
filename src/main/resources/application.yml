@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-batch-example
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/batchdb
+    username: root
+    password: root
+  batch:
+    jdbc:
+      initialize-schema: always

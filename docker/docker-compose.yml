@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  batchdb:
+    image: mysql
+    container_name: spring-batch-mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: batchdb
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - spring-batch-networks
+
+
+networks:
+  spring-batch-networks:
+    driver: "bridge"
